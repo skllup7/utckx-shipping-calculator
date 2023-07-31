@@ -98,3 +98,40 @@ body {
   .chart-container th {
     background-color: #f2f2f2;
   }
+
+  /* ShippingCalculator.css */
+  
+  .package-size-input {
+    width: 50%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+  }
+  
+  /* styles.css */
+
+/* Add styles for the package weight container */
+.package-weight-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .package-weight-container select {
+    margin-left: 10px;
+    padding: 5px;
+    font-size: 14px;
+  }
+  
+  /* Add additional styles for the dropdown */
+  select {
+    background-color: #f2f2f2;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  

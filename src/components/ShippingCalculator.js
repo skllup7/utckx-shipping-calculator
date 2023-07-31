@@ -15,6 +15,11 @@ const ShippingCalculator = () => {
   };
 
   const addFreightRate = () => {
+    if (!packageSize || !destination || !rate) {
+      alert('Please fill in all the fields.');
+      return;
+    }
+
     setFreightRates([...freightRates, { packageSize, destination, rate: parseFloat(rate) }]);
     setPackageSize('');
     setDestination('');
@@ -26,13 +31,13 @@ const ShippingCalculator = () => {
       {!isLoggedIn ? (
         <LoginForm onLogin={handleLogin} />
       ) : (
-        <div className="shipping-calculator-container"> {/* Add the class name for container */}
+        <div className="shipping-calculator-container">
           <h1>Admin Dashboard</h1>
           <div>
             <h2>Add Freight Rate</h2>
             <input
               type="text"
-              placeholder="Package Size"
+              placeholder="Package Weight"
               value={packageSize}
               onChange={(e) => setPackageSize(e.target.value)}
             />
@@ -43,7 +48,7 @@ const ShippingCalculator = () => {
               onChange={(e) => setDestination(e.target.value)}
             />
             <input
-              type="number"
+              type="text"
               placeholder="Shipping Rate"
               value={rate}
               onChange={(e) => setRate(e.target.value)}
