@@ -1,37 +1,79 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react'; 
 
-const LoginForm = ({ onLogin }) => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+const LoginForm = ({onLogin}) => { 
 
-  const handleLogin = () => {
-    // In a real application, you would perform authentication here
-    // For simplicity, we're using hardcoded username "admin" and password "admin"
-    if (username === 'admin' && password === 'admin') {
-      onLogin();
-    } else {
-      alert('Invalid username or password');
-    }
-  };
+// Initializing the state variables for username is given and complete the code for password  
 
-  return (
-    <div>
-      <h2>Admin Login</h2>
-      <input
-        type="text"
-        placeholder="Enter username"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="Enter password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <button onClick={handleLogin}>Login</button>
-    </div>
-  );
-};
+//using the useState hook 
 
-export default LoginForm;
+ const [username, setUsername] = useState(''); 
+
+//const [] = useState(''); 
+
+ // Define the handleLogin function to check the credentials 
+
+ const handleLogin = () => { 
+
+    // Check if the username is "admin" and password is "admin" 
+
+    // If they match, call the onLogin function to indicate successful login 
+
+    // Otherwise, display an alert saying "Invalid username or password" 
+
+    // Replace the blank spaces (_____) with appropriate code 
+
+    if (username === '' && password === '') { 
+
+      _____; 
+
+    } else { 
+
+      _____; 
+
+    } 
+
+  }; 
+
+return ( 
+
+    <div> 
+
+      <h2>Admin Login</h2> 
+
+      <input 
+
+        type="text" 
+
+        placeholder="Enter username" 
+
+        value={username} 
+
+        onChange={(e) => setUsername(e.target.value)} 
+
+      /> 
+
+      <input 
+
+        type="password" 
+
+        placeholder="Enter password" 
+
+        //Complete the value and onChange event function 
+
+        // value={} 
+
+        // onChange={} 
+
+      /> 
+
+      {/* Add an onClick event handler to the button to call the handleLogin function */} 
+
+      <button onClick={_____}>Login</button> 
+
+    </div> 
+
+  ); 
+
+}; 
+
+export default LoginForm; 
