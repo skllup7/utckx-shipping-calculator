@@ -1,78 +1,50 @@
 import React, {useState} from 'react'; 
 
 const LoginForm = ({onLogin}) => { 
-
 // Initializing the state variables for username is given and complete the code for password  
-
 //using the useState hook 
 
- const [username, setUsername] = useState(''); 
+const [username, setUsername] = useState(''); 
 
 //const [] = useState(''); 
 
- // Define the handleLogin function to check the credentials 
+// Define the handleLogin function to check the credentials 
+const handleLogin = () => { 
+// Check if the username is "admin" and password is "admin" 
+// If they match, call the onLogin function to indicate successful login 
+// Otherwise, display an alert saying "Invalid username or password" 
 
- const handleLogin = () => { 
+if (username === '' && password === '') { 
 
-    // Check if the username is "admin" and password is "admin" 
 
-    // If they match, call the onLogin function to indicate successful login 
+} else { 
+ 
 
-    // Otherwise, display an alert saying "Invalid username or password" 
+} 
+}; 
 
-    // Replace the blank spaces (_____) with appropriate code 
+return (
+<div>
+<h2>Admin Login</h2>
+<input
+type="text"
+placeholder="Enter username"
+value={username}
+onChange={(e) => setUsername(e.target.value)}
+/>
+<input 
+type="password" 
+placeholder="Enter password" 
+//Complete the value and onChange event function 
+// value={} 
+// onChange={} 
+/> 
+{/* Add an onClick event handler to the button to call the handleLogin function */} 
+<button onClick={}>Login</button> 
 
-    if (username === '' && password === '') { 
+</div> 
 
-      _____; 
-
-    } else { 
-
-      _____; 
-
-    } 
-
-  }; 
-
-return ( 
-
-    <div> 
-
-      <h2>Admin Login</h2> 
-
-      <input 
-
-        type="text" 
-
-        placeholder="Enter username" 
-
-        value={username} 
-
-        onChange={(e) => setUsername(e.target.value)} 
-
-      /> 
-
-      <input 
-
-        type="password" 
-
-        placeholder="Enter password" 
-
-        //Complete the value and onChange event function 
-
-        // value={} 
-
-        // onChange={} 
-
-      /> 
-
-      {/* Add an onClick event handler to the button to call the handleLogin function */} 
-
-      <button onClick={_____}>Login</button> 
-
-    </div> 
-
-  ); 
+ ); 
 
 }; 
 
